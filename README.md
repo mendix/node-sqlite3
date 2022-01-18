@@ -11,19 +11,19 @@ Asynchronous, non-blocking [SQLite3](https://sqlite.org/) bindings for [Node.js]
 
 ## Supported platforms
 
-The `sqlite3` module works with:
+The `sqlite3` module works with:
 * Node.js v11.x, v12.x, v13.x and v14.x.
 * Electron v6.0.x, v6.1.x, v7.0.x, v7.1.x, v8.0.x, v8.1.x and v8.2.x
 
-Binaries for most Node versions and platforms are provided by default via [node-pre-gyp](https://github.com/mapbox/node-pre-gyp).
+Binaries for most Node versions and platforms are provided byd efault via [node-pre-gyp](https://github.com/mapbox/node-pre-gyp).
 
-The `sqlite3` module also works with [node-webkit](https://github.com/rogerwang/node-webkit) if node-webkit contains a supported version of Node.js engine. [(See below.)](#building-for-node-webkit)
+The `sqlite3` module also works with [node-webkit](https://github.com/rogerwang/node-webkit) if node-webkit contains a supported version of Node.js engine. [(See below.)](#building-for-node-webkit)
 
-SQLite's [SQLCipher extension](https://github.com/sqlcipher/sqlcipher) is also supported. [(See below.)](#building-for-sqlcipher)
+SQLite's [SQLCipher extension](https://github.com/sqlcipher/sqlcipher) is also supported. [(See below.)](#building-for-sqlcipher)
 
 # Usage
 
-**Note:** the module must be [installed](#installing) before use.
+**Note:** the module must be [installed](#installing) before use.
 
 ``` js
 var sqlite3 = require('sqlite3').verbose();
@@ -63,7 +63,7 @@ See the [API documentation](https://github.com/mapbox/node-sqlite3/wiki) in the 
 
 # Installing
 
-You can use [`npm`](https://github.com/isaacs/npm) to download and install:
+You can use [`npm`](https://github.com/isaacs/npm) to download and install:
 
 * The latest `sqlite3` package: `npm install sqlite3`
 
@@ -71,9 +71,9 @@ You can use [`npm`](https://github.com/isaacs/npm) to download and install:
 
 The module uses [node-pre-gyp](https://github.com/mapbox/node-pre-gyp) to download a pre-compiled binary for your platform, if it exists. Otherwise, it uses `node-gyp` to build the extension.
 
-It is also possible to make your own build of `sqlite3` from its source instead of its npm package ([see below](#building-from-the-source)).
+It is also possible to make your own build of `sqlite3` from its source instead of its npm package ([see below](#building-from-the-source)).
 
-It is possible to use the installed package in [node-webkit](https://github.com/rogerwang/node-webkit) instead of the vanilla Node.js. See [Building for node-webkit](#building-for-node-webkit) for details.
+It is possible to use the installed package in [node-webkit](https://github.com/rogerwang/node-webkit) instead of the vanilla Node.js. See [Building for node-webkit](#building-for-node-webkit) for details.
 
 ## Source install
 
@@ -115,13 +115,13 @@ Note that the magic *must* be exactly 15 characters long (16 bytes including nul
     
 ## Building for node-webkit
 
-Because of ABI differences, `sqlite3` must be built in a custom to be used with [node-webkit](https://github.com/rogerwang/node-webkit).
+Because of ABI differences, `sqlite3` must be built in a custom to be used with [node-webkit](https://github.com/rogerwang/node-webkit).
 
 To build node-sqlite3 for node-webkit:
 
 1. Install [`nw-gyp`](https://github.com/rogerwang/nw-gyp) globally: `npm install nw-gyp -g` *(unless already installed)*
 
-2. Build the module with the custom flags of `--runtime`, `--target_arch`, and `--target`:
+2. Build the module with the custom flags of `--runtime`, `--target_arch`, and `--target`:
 
 ```sh
 NODE_WEBKIT_VERSION="0.8.6" # see latest version at https://github.com/rogerwang/node-webkit#downloads
@@ -140,10 +140,10 @@ Remember the following:
 
 * You must provide the right `--target_arch` flag. `ia32` is needed to target 32bit node-webkit builds, while `x64` will target 64bit node-webkit builds (if available for your platform).
 
-* After the `sqlite3` package is built for node-webkit it cannot run in the vanilla Node.js (and vice versa).
-   * For example, `npm test` of the node-webkit's package would fail.
+* After the `sqlite3` package is built for node-webkit it cannot run in the vanilla Node.js (and vice versa).
+   * For example, `npm test` of the node-webkit's package would fail.
 
-Visit the “[Using Node modules](https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules)” article in the node-webkit's wiki for more details.
+Visit the “[Using Node modules](https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules)” article in the node-webkit's wiki for more details.
 
 ## Building for sqlcipher
 
@@ -194,7 +194,7 @@ In the case of MacOS with Homebrew, the command should look like the following:
 
 [mocha](https://github.com/visionmedia/mocha) is required to run unit tests.
 
-In sqlite3's directory (where its `package.json` resides) run the following:
+In sqlite3's directory (where its `package.json` resides) run the following:
 
     npm install mocha
     npm test
