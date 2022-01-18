@@ -1,3 +1,5 @@
+# NOTE: This is a (temp) fork from the original https://github.com/mapbox/node-sqlite3 version because the updated dependencies weren't published
+
 Asynchronous, non-blocking [SQLite3](https://sqlite.org/) bindings for [Node.js](http://nodejs.org/).
 
 [![NPM](https://nodei.co/npm/sqlite3.png?downloads=true&downloadRank=true)](https://nodei.co/npm/sqlite3/)
