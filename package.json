@@ -1,7 +1,7 @@
 {
   "name": "@mendix/sqlite3",
   "description": "Asynchronous, non-blocking SQLite3 bindings",
-  "version": "5.0.3-beta",
+  "version": "5.0.3",
   "homepage": "https://github.com/mapbox/node-sqlite3",
   "author": {
     "name": "MapBox",
